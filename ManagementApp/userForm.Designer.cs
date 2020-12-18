@@ -29,45 +29,39 @@ namespace ManagementApp
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label7 = new System.Windows.Forms.Label();
-            this.title = new System.Windows.Forms.Label();
-            this.通知查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.我的社团ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.成员列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.添加成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.删除成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改成员ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.通知查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.通知列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.发布通知ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.我的社团ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.活动记录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.发起活动ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.社团信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改个人信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.关于社团管理系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.关于社团管理系统ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.label7 = new System.Windows.Forms.Label();
+            this.title = new System.Windows.Forms.Label();
             this.statu = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.result = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.result)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.通知查询ToolStripMenuItem,
-            this.我的社团ToolStripMenuItem,
-            this.帮助ToolStripMenuItem,
-            this.帮助ToolStripMenuItem1});
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (30)))), ((int) (((byte) (30)))), ((int) (((byte) (30)))));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.toolStripMenuItem1, this.通知查询ToolStripMenuItem, this.我的社团ToolStripMenuItem, this.帮助ToolStripMenuItem, this.帮助ToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -76,20 +70,126 @@ namespace ManagementApp
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.成员列表ToolStripMenuItem,
-            this.添加成员ToolStripMenuItem,
-            this.删除成员ToolStripMenuItem,
-            this.修改成员ToolStripMenuItem});
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.成员列表ToolStripMenuItem, this.添加成员ToolStripMenuItem, this.删除成员ToolStripMenuItem, this.修改成员ToolStripMenuItem});
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(67, 20);
             this.toolStripMenuItem1.Text = "成员查询";
             // 
+            // 成员列表ToolStripMenuItem
+            // 
+            this.成员列表ToolStripMenuItem.Name = "成员列表ToolStripMenuItem";
+            this.成员列表ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.成员列表ToolStripMenuItem.Text = "成员列表";
+            this.成员列表ToolStripMenuItem.Click += new System.EventHandler(this.成员列表ToolStripMenuItem_Click);
+            // 
+            // 添加成员ToolStripMenuItem
+            // 
+            this.添加成员ToolStripMenuItem.Name = "添加成员ToolStripMenuItem";
+            this.添加成员ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.添加成员ToolStripMenuItem.Text = "添加成员";
+            // 
+            // 删除成员ToolStripMenuItem
+            // 
+            this.删除成员ToolStripMenuItem.Name = "删除成员ToolStripMenuItem";
+            this.删除成员ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.删除成员ToolStripMenuItem.Text = "删除成员";
+            // 
+            // 修改成员ToolStripMenuItem
+            // 
+            this.修改成员ToolStripMenuItem.Name = "修改成员ToolStripMenuItem";
+            this.修改成员ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.修改成员ToolStripMenuItem.Text = "修改成员";
+            // 
+            // 通知查询ToolStripMenuItem
+            // 
+            this.通知查询ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.通知列表ToolStripMenuItem, this.发布通知ToolStripMenuItem});
+            this.通知查询ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
+            this.通知查询ToolStripMenuItem.Name = "通知查询ToolStripMenuItem";
+            this.通知查询ToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.通知查询ToolStripMenuItem.Text = "通知查询";
+            // 
+            // 通知列表ToolStripMenuItem
+            // 
+            this.通知列表ToolStripMenuItem.Name = "通知列表ToolStripMenuItem";
+            this.通知列表ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.通知列表ToolStripMenuItem.Text = "通知列表";
+            // 
+            // 发布通知ToolStripMenuItem
+            // 
+            this.发布通知ToolStripMenuItem.Name = "发布通知ToolStripMenuItem";
+            this.发布通知ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.发布通知ToolStripMenuItem.Text = "发布通知";
+            // 
+            // 我的社团ToolStripMenuItem
+            // 
+            this.我的社团ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.活动记录ToolStripMenuItem, this.发起活动ToolStripMenuItem});
+            this.我的社团ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
+            this.我的社团ToolStripMenuItem.Name = "我的社团ToolStripMenuItem";
+            this.我的社团ToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.我的社团ToolStripMenuItem.Text = "活动查询";
+            // 
+            // 活动记录ToolStripMenuItem
+            // 
+            this.活动记录ToolStripMenuItem.Name = "活动记录ToolStripMenuItem";
+            this.活动记录ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.活动记录ToolStripMenuItem.Text = "活动记录";
+            // 
+            // 发起活动ToolStripMenuItem
+            // 
+            this.发起活动ToolStripMenuItem.Name = "发起活动ToolStripMenuItem";
+            this.发起活动ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.发起活动ToolStripMenuItem.Text = "发起活动";
+            // 
+            // 帮助ToolStripMenuItem
+            // 
+            this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.社团信息ToolStripMenuItem, this.修改个人信息ToolStripMenuItem});
+            this.帮助ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
+            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.帮助ToolStripMenuItem.Text = "资料查询";
+            // 
+            // 社团信息ToolStripMenuItem
+            // 
+            this.社团信息ToolStripMenuItem.Name = "社团信息ToolStripMenuItem";
+            this.社团信息ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.社团信息ToolStripMenuItem.Text = "社团信息";
+            // 
+            // 修改个人信息ToolStripMenuItem
+            // 
+            this.修改个人信息ToolStripMenuItem.Name = "修改个人信息ToolStripMenuItem";
+            this.修改个人信息ToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.修改个人信息ToolStripMenuItem.Text = "修改个人信息";
+            // 
+            // 帮助ToolStripMenuItem1
+            // 
+            this.帮助ToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.关于社团管理系统ToolStripMenuItem, this.toolStripSeparator1, this.关于社团管理系统ToolStripMenuItem1});
+            this.帮助ToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
+            this.帮助ToolStripMenuItem1.Name = "帮助ToolStripMenuItem1";
+            this.帮助ToolStripMenuItem1.Size = new System.Drawing.Size(43, 20);
+            this.帮助ToolStripMenuItem1.Text = "帮助";
+            // 
+            // 关于社团管理系统ToolStripMenuItem
+            // 
+            this.关于社团管理系统ToolStripMenuItem.Name = "关于社团管理系统ToolStripMenuItem";
+            this.关于社团管理系统ToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.关于社团管理系统ToolStripMenuItem.Text = "查看帮助";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(170, 6);
+            // 
+            // 关于社团管理系统ToolStripMenuItem1
+            // 
+            this.关于社团管理系统ToolStripMenuItem1.Name = "关于社团管理系统ToolStripMenuItem1";
+            this.关于社团管理系统ToolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
+            this.关于社团管理系统ToolStripMenuItem1.Text = "关于 社团管理系统";
+            // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label7.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.label7.Location = new System.Drawing.Point(494, 381);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(395, 64);
@@ -98,8 +198,8 @@ namespace ManagementApp
             // 
             // title
             // 
-            this.title.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.title.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
+            this.title.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.title.Location = new System.Drawing.Point(557, 342);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(240, 64);
@@ -107,128 +207,10 @@ namespace ManagementApp
             this.title.Text = "社团管理系统";
             this.title.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // 通知查询ToolStripMenuItem
-            // 
-            this.通知查询ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.通知列表ToolStripMenuItem,
-            this.发布通知ToolStripMenuItem});
-            this.通知查询ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.通知查询ToolStripMenuItem.Name = "通知查询ToolStripMenuItem";
-            this.通知查询ToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.通知查询ToolStripMenuItem.Text = "通知查询";
-            // 
-            // 我的社团ToolStripMenuItem
-            // 
-            this.我的社团ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.活动记录ToolStripMenuItem,
-            this.发起活动ToolStripMenuItem});
-            this.我的社团ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.我的社团ToolStripMenuItem.Name = "我的社团ToolStripMenuItem";
-            this.我的社团ToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.我的社团ToolStripMenuItem.Text = "活动查询";
-            // 
-            // 帮助ToolStripMenuItem
-            // 
-            this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.社团信息ToolStripMenuItem,
-            this.修改个人信息ToolStripMenuItem});
-            this.帮助ToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.帮助ToolStripMenuItem.Text = "资料查询";
-            // 
-            // 成员列表ToolStripMenuItem
-            // 
-            this.成员列表ToolStripMenuItem.Name = "成员列表ToolStripMenuItem";
-            this.成员列表ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.成员列表ToolStripMenuItem.Text = "成员列表";
-            // 
-            // 添加成员ToolStripMenuItem
-            // 
-            this.添加成员ToolStripMenuItem.Name = "添加成员ToolStripMenuItem";
-            this.添加成员ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.添加成员ToolStripMenuItem.Text = "添加成员";
-            // 
-            // 删除成员ToolStripMenuItem
-            // 
-            this.删除成员ToolStripMenuItem.Name = "删除成员ToolStripMenuItem";
-            this.删除成员ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.删除成员ToolStripMenuItem.Text = "删除成员";
-            // 
-            // 修改成员ToolStripMenuItem
-            // 
-            this.修改成员ToolStripMenuItem.Name = "修改成员ToolStripMenuItem";
-            this.修改成员ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.修改成员ToolStripMenuItem.Text = "修改成员";
-            // 
-            // 通知列表ToolStripMenuItem
-            // 
-            this.通知列表ToolStripMenuItem.Name = "通知列表ToolStripMenuItem";
-            this.通知列表ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.通知列表ToolStripMenuItem.Text = "通知列表";
-            // 
-            // 发布通知ToolStripMenuItem
-            // 
-            this.发布通知ToolStripMenuItem.Name = "发布通知ToolStripMenuItem";
-            this.发布通知ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.发布通知ToolStripMenuItem.Text = "发布通知";
-            // 
-            // 活动记录ToolStripMenuItem
-            // 
-            this.活动记录ToolStripMenuItem.Name = "活动记录ToolStripMenuItem";
-            this.活动记录ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.活动记录ToolStripMenuItem.Text = "活动记录";
-            // 
-            // 发起活动ToolStripMenuItem
-            // 
-            this.发起活动ToolStripMenuItem.Name = "发起活动ToolStripMenuItem";
-            this.发起活动ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.发起活动ToolStripMenuItem.Text = "发起活动";
-            // 
-            // 社团信息ToolStripMenuItem
-            // 
-            this.社团信息ToolStripMenuItem.Name = "社团信息ToolStripMenuItem";
-            this.社团信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.社团信息ToolStripMenuItem.Text = "社团信息";
-            // 
-            // 修改个人信息ToolStripMenuItem
-            // 
-            this.修改个人信息ToolStripMenuItem.Name = "修改个人信息ToolStripMenuItem";
-            this.修改个人信息ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.修改个人信息ToolStripMenuItem.Text = "修改个人信息";
-            // 
-            // 帮助ToolStripMenuItem1
-            // 
-            this.帮助ToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.关于社团管理系统ToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.关于社团管理系统ToolStripMenuItem1});
-            this.帮助ToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.帮助ToolStripMenuItem1.Name = "帮助ToolStripMenuItem1";
-            this.帮助ToolStripMenuItem1.Size = new System.Drawing.Size(43, 20);
-            this.帮助ToolStripMenuItem1.Text = "帮助";
-            // 
-            // 关于社团管理系统ToolStripMenuItem
-            // 
-            this.关于社团管理系统ToolStripMenuItem.Name = "关于社团管理系统ToolStripMenuItem";
-            this.关于社团管理系统ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.关于社团管理系统ToolStripMenuItem.Text = "查看帮助";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // 关于社团管理系统ToolStripMenuItem1
-            // 
-            this.关于社团管理系统ToolStripMenuItem1.Name = "关于社团管理系统ToolStripMenuItem1";
-            this.关于社团管理系统ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.关于社团管理系统ToolStripMenuItem1.Text = "关于 社团管理系统";
-            // 
             // statu
             // 
-            this.statu.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.statu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.statu.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
+            this.statu.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.statu.Location = new System.Drawing.Point(556, 413);
             this.statu.Name = "statu";
             this.statu.Size = new System.Drawing.Size(240, 64);
@@ -236,43 +218,45 @@ namespace ManagementApp
             this.statu.Text = " ";
             this.statu.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // dataGridView1
+            // result
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            this.dataGridView1.Location = new System.Drawing.Point(12, 42);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(355, 364);
-            this.dataGridView1.TabIndex = 26;
+            this.result.BackgroundColor = System.Drawing.Color.FromArgb(((int) (((byte) (30)))), ((int) (((byte) (30)))), ((int) (((byte) (30)))));
+            this.result.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.result.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.result.GridColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (244)))));
+            this.result.Location = new System.Drawing.Point(22, 42);
+            this.result.Name = "result";
+            this.result.RowTemplate.Height = 23;
+            this.result.Size = new System.Drawing.Size(355, 364);
+            this.result.TabIndex = 26;
             // 
             // userForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.result);
             this.Controls.Add(this.statu);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.title);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "userForm";
             this.Text = "社团管理系统";
+            this.Load += new System.EventHandler(this.userForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.result)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.DataGridView result;
 
         #endregion
 
@@ -298,6 +282,5 @@ namespace ManagementApp
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem 关于社团管理系统ToolStripMenuItem1;
         private System.Windows.Forms.Label statu;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

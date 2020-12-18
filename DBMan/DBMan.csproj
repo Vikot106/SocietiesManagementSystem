@@ -39,8 +39,15 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Conn.cs" />
+        <Compile Include="DataDao.cs" />
+        <Compile Include="DataDaoImp.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="userDAO.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\DataMan\DataMan.csproj">
+        <Project>{ebe047f7-893a-4447-9a95-f99dce747ccb}</Project>
+        <Name>DataMan</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

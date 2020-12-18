@@ -4,23 +4,23 @@ using DBMan;
 
 namespace ManagementApp {
     public partial class Login : Form {
-        private userDAO ud = new userDAO();
+        private DataDao dd = new DataDaoImp();
 
         public Login() {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            if (textBox1.Text == null || textBox2.Text == null) {
+            if (textBox1.Text == "" || textBox2.Text == "") {
                 MessageBox.Show("学号与密码不能为空");
             }
-            else if ((ud.userLogin(textBox1.Text, textBox2.Text)) == 1) {
-                userForm uf = new userForm();
+            else if ((dd.userLogin(textBox1.Text, textBox2.Text)) == 1) {
+                userForm uf = new userForm(false,textBox1.Text);
                 uf.Show();
                 this.Hide();
             }
-            else if ((ud.userLogin(textBox1.Text, textBox2.Text)) == 2) {
-                userForm uf = new userForm();
+            else if ((dd.userLogin(textBox1.Text, textBox2.Text)) == 2) {
+                userForm uf = new userForm(true,textBox1.Text);
                 uf.Show();
                 this.Hide();
             }

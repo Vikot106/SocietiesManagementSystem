@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 using DataMan;
 
 namespace DBMan {
-    public class DataDao:IDataDao {
+    public class DataDaoImpl:IDataDao {
         Conn conn = new Conn();
         private OdbcConnection con = null;
         

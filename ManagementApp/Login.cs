@@ -4,7 +4,7 @@ using DBMan;
 
 namespace ManagementApp {
     public partial class Login : Form {
-        private DataDao dd = new DataDaoImp();
+        private IDataDao dd = new DataDao();
 
         public Login() {
             InitializeComponent();

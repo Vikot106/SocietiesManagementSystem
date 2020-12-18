@@ -40,7 +40,7 @@
     <ItemGroup>
         <Compile Include="Conn.cs" />
         <Compile Include="DataDao.cs" />
-        <Compile Include="DataDaoImp.cs" />
+        <Compile Include="IDataDao.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>

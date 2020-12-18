@@ -13,12 +13,26 @@ namespace DBMan {
         }
 
         private string getName(string xh) {
-            string name = null;
+            string name = "";
+            OdbcConnection con = getCon();
+            string sql = "select * from tb_user where sid = " + xh + "";
+            OdbcCommand com = new OdbcCommand(sql,con);
+            OdbcDataReader dr = com.ExecuteReader();
+            if (dr.Read()) {
+                name = dr.GetString(1);
+            }
             return name;
         }
         
         private string getSoc(string xh) {
-            string soc = null;
+            string soc = "";
+            OdbcConnection con = getCon();
+            string sql = "select * from tb_user where sid = " + xh + "";
+            OdbcCommand com = new OdbcCommand(sql,con);
+            OdbcDataReader dr = com.ExecuteReader();
+            if (dr.Read()) {
+                soc = dr.GetString(7);
+            }
             return soc;
         }
         

@@ -73,6 +73,7 @@
             this.reg.TabIndex = 84;
             this.reg.Text = "注册";
             this.reg.UseVisualStyleBackColor = true;
+            this.reg.Click += new System.EventHandler(this.reg_Click_1);
             // 
             // exit
             // 
@@ -85,6 +86,7 @@
             this.exit.TabIndex = 83;
             this.exit.Text = "返回";
             this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // label8
             // 

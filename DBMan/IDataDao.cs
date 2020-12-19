@@ -1,22 +1,25 @@
 ﻿using System;
-using System.Data.SqlClient;
+using System.Data.Odbc;
 using DataMan;
 
 namespace DBMan {
     public interface IDataDao {
         int userLogin(string xh, string mm);
-        SqlDataAdapter listUser(string xh);
+        string getName(string xh);
+        string getSoc(string xh);
+        OdbcDataAdapter listUser(string xh,Boolean flag);
         Boolean addUser(User u);
         Boolean delUser(string xh);
         Boolean modUserA(User u);
+        Boolean modPass(string xh, string sfz, string mm);
 
-        SqlDataAdapter listNotice(string xh);
+        OdbcDataAdapter listNotice(string xh);
         Boolean postNotice(string xh, string notice);
 
-        SqlDataAdapter listActivity(string xh);
-        Boolean postActivity(string xh,string year, string day, string start, string end);
+        OdbcDataAdapter listActivity(string xh);
+        Boolean postActivity(string xh, string dateS, string dateE);
 
-        SqlDataAdapter listSoc(string xh);
+        OdbcDataAdapter listSoc(string xh);
         Boolean modUserU(User u);
     }
 }

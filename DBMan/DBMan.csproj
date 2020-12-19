@@ -39,8 +39,8 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Conn.cs" />
-        <Compile Include="DataDaoImpl.cs" />
         <Compile Include="IDataDao.cs" />
+        <Compile Include="Impl\DataDaoImpl.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>

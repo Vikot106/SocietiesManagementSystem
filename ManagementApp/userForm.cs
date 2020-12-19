@@ -82,24 +82,28 @@ namespace ManagementApp
         }
 
         private void 删除成员ToolStripMenuItem_Click(object sender, EventArgs e) {
-            //userDelete ud = new userDelete(dd);
-
+            userDelete ud = new userDelete();
+            ud.Show();
         }
 
         private void 修改成员ToolStripMenuItem_Click(object sender, EventArgs e) {
-
+            userMod um = new userMod();
+            um.Show();
         }
 
         private void 发布通知ToolStripMenuItem_Click(object sender, EventArgs e) {
-
+            userNotice un = new userNotice(xh);
+            un.Show();
         }
 
         private void 发起活动ToolStripMenuItem_Click(object sender, EventArgs e) {
-
+            userActive ua = new userActive(xh);
+            ua.Show();
         }
 
         private void 修改个人信息ToolStripMenuItem_Click(object sender, EventArgs e) {
-
+            userModU umu = new userModU(xh);
+            umu.Show();
         }
 
         private void 关于社团管理系统ToolStripMenuItem_Click(object sender, EventArgs e) {

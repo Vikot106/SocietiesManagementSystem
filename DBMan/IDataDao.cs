@@ -10,7 +10,7 @@ namespace DBMan {
         OdbcDataAdapter listUser(string xh,Boolean flag);
         Boolean addUser(User u);
         Boolean delUser(string xh);
-        Boolean modUserA(User u);
+        Boolean modUserA(User u,string xh);
         Boolean modPass(string xh, string sfz, string mm);
 
         OdbcDataAdapter listNotice(string xh);
@@ -20,6 +20,6 @@ namespace DBMan {
         Boolean postActivity(string xh, string dateS, string dateE);
 
         OdbcDataAdapter listSoc(string xh);
-        Boolean modUserU(User u);
+        Boolean modUserU(User u,string xh);
     }
 }

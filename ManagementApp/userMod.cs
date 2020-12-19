@@ -23,23 +23,19 @@ namespace ManagementApp
             User u = new User();
             u.Uname = uname.Text;
             u.Sid = sid.Text;
-            u.Gender = gender.Text;
             u.Age = age.Text;
             u.Phone = phone.Text;
             u.Depart = depart.Text;
-            u.Soc = soc.Text;
-            u.Idenity = idenity.Text;
-            u.Upass = pass.Text;
-            if (dd.addUser(u)) {
-                MessageBox.Show("注册成功！");
+            if (dd.modUserA(u,sid.Text)) {
+                MessageBox.Show("修改成功！");
             }
             else {
-                MessageBox.Show("注册失败！");
+                MessageBox.Show("修改失败！");
             }
         }
 
         private void exit_Click(object sender, EventArgs e) {
-            this.Hide();
+            this.Close();
         }
     }
 }

@@ -40,7 +40,7 @@ namespace DBMan {
         public int userLogin(string xh, string mm) {
             int flag = 0;
             OdbcConnection con = getCon();
-            string sql = "select * from tb_user where sid = " + xh + " and pass = " + mm + "";
+            string sql = "select * from tb_user where sid = " + xh + " and pass = '" + mm + "'";
             OdbcCommand com = new OdbcCommand(sql,con);
             OdbcDataReader dr = com.ExecuteReader();
             if (dr.Read()) {
@@ -62,7 +62,7 @@ namespace DBMan {
                 sql = "select uname as 姓名,sid as 学号,gender as 性别,age as 年龄,phone as 联系方式,depart as 系别,idenity as 身份证号 from tb_user where soc = '" + soc + "'";
             }
             else {
-                sql = "select uname as 姓名,sid as 学号 from tb_user where soc = '" + soc + "'";
+                sql = "select uname as 姓名,sid as 学号,gender as 性别,phone as 联系方式,depart as 系别 from tb_user where soc = '" + soc + "'";
             }
             adapter = new OdbcDataAdapter(sql,con);
             return adapter;
@@ -72,19 +72,19 @@ namespace DBMan {
             OdbcConnection con = getCon();
             string sql = "insert into tb_user values('"+u.Uname+"','"+u.Sid+"','"+u.Gender+"','"+u.Age+"','"+u.Phone+"','"+u.Depart+"','"+u.Soc+"','"+u.Idenity+"','"+u.Upass+"',0)";
             OdbcCommand com = new OdbcCommand(sql,con);
-            //try {
+            try {
                 com.ExecuteNonQuery();
                 return true;
-            //}
-            //catch (Exception e) {
-            //    throw e;
-            //    return false;
-            //}
+            }
+            catch (Exception e) {
+                throw e;
+                return false;
+            }
         }
 
         public bool delUser(string xh) {
             OdbcConnection con = getCon();
-            string sql = "delete * from tb_user where sid = " + xh + "";
+            string sql = "delete from tb_user where sid = " + xh + "";
             OdbcCommand com = new OdbcCommand(sql,con);
             try {
                 com.ExecuteNonQuery();
@@ -95,10 +95,9 @@ namespace DBMan {
             }
         }
 
-        public bool modUserA(User u) {
+        public bool modUserA(User u,string xh) {
             OdbcConnection con = getCon();
-            //string sql = "update tb_user set pass = '"+mm+"' where sid = '"+xh+"'";
-            string sql = "";
+            string sql = "update tb_user set uname = '"+u.Uname+"',age = "+u.Age+",phone = "+u.Phone+",depart = "+u.Depart+" where sid = '"+xh+"'";
             OdbcCommand com = new OdbcCommand(sql,con);
             try {
                 com.ExecuteNonQuery();
@@ -136,7 +135,7 @@ namespace DBMan {
             string soc = getSoc(xh);
             string date = DateTime.Now.ToString("yyyy-MM-dd");
             OdbcConnection con = getCon();
-            string sql = "insert into tb_notice('soc', 'user', 'date', 'notice') values('"+soc+"','"+name+"','"+date+"','"+notice+")";
+            string sql = "insert into tb_notice values('"+soc+"','"+name+"','"+date+"','"+notice+"')";
             OdbcCommand com = new OdbcCommand(sql,con);
             try {
                 com.ExecuteNonQuery();
@@ -158,7 +157,7 @@ namespace DBMan {
         public bool postActivity(string xh, string dateS, string dateE) {
             string soc = getSoc(xh);
             OdbcConnection con = getCon();
-            string sql = "insert into tb_active('soc', 'dateS', 'dateE') values('"+soc+"','"+dateS+"','"+dateE+")";
+            string sql = "insert into tb_active values('"+soc+"','"+dateS+"','"+dateE+"')";
             OdbcCommand com = new OdbcCommand(sql,con);
             try {
                 com.ExecuteNonQuery();
@@ -177,8 +176,17 @@ namespace DBMan {
             return adapter;
         }
 
-        public bool modUserU(User u) {
-            throw new System.NotImplementedException();
+        public bool modUserU(User u,string xh) {
+            OdbcConnection con = getCon();
+            string sql = "update tb_user set age = '"+u.Age+"',phone = "+u.Phone+",depart = "+u.Depart+",idenity = "+u.Idenity+",pass = "+u.Upass+" where sid = '"+xh+"'";
+            OdbcCommand com = new OdbcCommand(sql,con);
+            try {
+                com.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e) {
+                return false;
+            }
         }
     }
 }

@@ -26,8 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(userModU));
             this.label1 = new System.Windows.Forms.Label();
             this.reg = new System.Windows.Forms.Button();
@@ -46,31 +45,31 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.label1.Location = new System.Drawing.Point(16, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 32);
+            this.label1.Size = new System.Drawing.Size(94, 32);
             this.label1.TabIndex = 23;
-            this.label1.Text = ">注册";
+            this.label1.Text = ">修改信息";
             // 
             // reg
             // 
             this.reg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reg.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.reg.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
             this.reg.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.reg.Location = new System.Drawing.Point(84, 206);
             this.reg.Name = "reg";
             this.reg.Size = new System.Drawing.Size(50, 30);
             this.reg.TabIndex = 84;
-            this.reg.Text = "注册";
+            this.reg.Text = "修改";
             this.reg.UseVisualStyleBackColor = true;
             this.reg.Click += new System.EventHandler(this.reg_Click_1);
             // 
             // exit
             // 
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.exit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
             this.exit.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.exit.Location = new System.Drawing.Point(140, 206);
             this.exit.Name = "exit";
@@ -82,7 +81,7 @@
             // 
             // pass
             // 
-            this.pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.pass.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (30)))), ((int) (((byte) (30)))), ((int) (((byte) (30)))));
             this.pass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pass.ForeColor = System.Drawing.Color.White;
             this.pass.Location = new System.Drawing.Point(75, 167);
@@ -92,7 +91,7 @@
             // 
             // idenity
             // 
-            this.idenity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.idenity.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (30)))), ((int) (((byte) (30)))), ((int) (((byte) (30)))));
             this.idenity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idenity.ForeColor = System.Drawing.Color.White;
             this.idenity.Location = new System.Drawing.Point(74, 135);
@@ -102,7 +101,7 @@
             // 
             // depart
             // 
-            this.depart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.depart.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (30)))), ((int) (((byte) (30)))), ((int) (((byte) (30)))));
             this.depart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.depart.ForeColor = System.Drawing.Color.White;
             this.depart.Location = new System.Drawing.Point(73, 104);
@@ -112,7 +111,7 @@
             // 
             // phone
             // 
-            this.phone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.phone.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (30)))), ((int) (((byte) (30)))), ((int) (((byte) (30)))));
             this.phone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.phone.ForeColor = System.Drawing.Color.White;
             this.phone.Location = new System.Drawing.Point(73, 75);
@@ -122,7 +121,7 @@
             // 
             // age
             // 
-            this.age.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.age.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (30)))), ((int) (((byte) (30)))), ((int) (((byte) (30)))));
             this.age.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.age.ForeColor = System.Drawing.Color.White;
             this.age.Location = new System.Drawing.Point(74, 46);
@@ -132,7 +131,7 @@
             // 
             // label10
             // 
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.label10.Location = new System.Drawing.Point(28, 169);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 20);
@@ -141,7 +140,7 @@
             // 
             // label9
             // 
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.label9.Location = new System.Drawing.Point(28, 137);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 20);
@@ -150,7 +149,7 @@
             // 
             // label7
             // 
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.label7.Location = new System.Drawing.Point(27, 106);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 20);
@@ -159,7 +158,7 @@
             // 
             // label6
             // 
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.label6.Location = new System.Drawing.Point(27, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 20);
@@ -168,7 +167,7 @@
             // 
             // label5
             // 
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.label5.Location = new System.Drawing.Point(27, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 20);
@@ -179,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
             this.ClientSize = new System.Drawing.Size(213, 255);
             this.Controls.Add(this.reg);
             this.Controls.Add(this.exit);
@@ -195,13 +194,12 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "userModU";
             this.Text = "注册";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion

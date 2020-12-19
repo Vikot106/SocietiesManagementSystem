@@ -34,8 +34,8 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 32);
@@ -44,7 +44,7 @@
             // 
             // label14
             // 
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.label14.Location = new System.Drawing.Point(28, 41);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(103, 20);
@@ -53,7 +53,7 @@
             // 
             // label2
             // 
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.label2.Location = new System.Drawing.Point(28, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 20);
@@ -62,6 +62,8 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "MM-dd HH:mm";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(30, 64);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
@@ -70,6 +72,8 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.CustomFormat = "MM-dd HH:mm";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(30, 120);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
@@ -78,7 +82,7 @@
             // reg
             // 
             this.reg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reg.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.reg.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
             this.reg.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.reg.Location = new System.Drawing.Point(144, 168);
             this.reg.Name = "reg";
@@ -91,7 +95,7 @@
             // exit
             // 
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.exit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (134)));
             this.exit.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.exit.Location = new System.Drawing.Point(200, 168);
             this.exit.Name = "exit";
@@ -105,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (40)))), ((int) (((byte) (40)))), ((int) (((byte) (40)))));
             this.ClientSize = new System.Drawing.Size(264, 216);
             this.Controls.Add(this.reg);
             this.Controls.Add(this.exit);
@@ -114,12 +118,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label1);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (224)))), ((int) (((byte) (224)))), ((int) (((byte) (224)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "userActive";
             this.Text = "发布活动";
+            this.Load += new System.EventHandler(this.userActive_Load);
             this.ResumeLayout(false);
-
         }
 
         #endregion

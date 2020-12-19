@@ -82,6 +82,7 @@ namespace ManagementApp
         }
 
         private void 删除成员ToolStripMenuItem_Click(object sender, EventArgs e) {
+            //userDelete ud = new userDelete(dd);
 
         }
 

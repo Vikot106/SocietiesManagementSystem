@@ -202,6 +202,7 @@ namespace ManagementApp
             this.MaximizeBox = false;
             this.Name = "Login";
             this.Text = "登录";
+            this.Enter += new System.EventHandler(this.button1_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

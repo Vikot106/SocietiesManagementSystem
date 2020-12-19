@@ -117,5 +117,15 @@ namespace ManagementApp
         private void 退出系统ToolStripMenuItem_Click(object sender, EventArgs e) {
             Environment.Exit(0);
         }
+        
+        private void userForm_FormClosing(object sender, FormClosingEventArgs e) {
+            DialogResult dr = MessageBox.Show("是否退出?", "提示:", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (dr == DialogResult.OK){
+                Environment.Exit(0);              //关闭窗体
+            }
+            else if (dr == DialogResult.Cancel) {
+                e.Cancel = true;                  //不执行操作
+            }
+        }
     }
 }

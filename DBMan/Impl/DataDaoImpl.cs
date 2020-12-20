@@ -97,7 +97,7 @@ namespace DBMan {
 
         public bool modUserA(User u,string xh) {
             OdbcConnection con = getCon();
-            string sql = "update tb_user set uname = '"+u.Uname+"',age = "+u.Age+",phone = "+u.Phone+",depart = "+u.Depart+" where sid = '"+xh+"'";
+            string sql = "update tb_user set uname = '"+u.Uname+"',age = "+u.Age+",phone = "+u.Phone+",depart = '"+u.Depart+"' where sid = '"+xh+"'";
             OdbcCommand com = new OdbcCommand(sql,con);
             try {
                 com.ExecuteNonQuery();
@@ -178,7 +178,7 @@ namespace DBMan {
 
         public bool modUserU(User u,string xh) {
             OdbcConnection con = getCon();
-            string sql = "update tb_user set age = '"+u.Age+"',phone = "+u.Phone+",depart = "+u.Depart+",idenity = "+u.Idenity+",pass = "+u.Upass+" where sid = '"+xh+"'";
+            string sql = "update tb_user set age = '"+u.Age+"',phone = "+u.Phone+",depart = '"+u.Depart+"',idenity = "+u.Idenity+",pass = "+u.Upass+" where sid = '"+xh+"'";
             OdbcCommand com = new OdbcCommand(sql,con);
             try {
                 com.ExecuteNonQuery();
@@ -187,6 +187,13 @@ namespace DBMan {
             catch (Exception e) {
                 return false;
             }
+        }
+
+        public OdbcDataAdapter listAllSoc() {
+            OdbcConnection con = getCon();
+            string sql = "select soc from tb_soc";
+            adapter = new OdbcDataAdapter(sql,con);
+            return adapter;
         }
     }
 }

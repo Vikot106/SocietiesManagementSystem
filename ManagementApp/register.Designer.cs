@@ -35,7 +35,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pass = new System.Windows.Forms.TextBox();
             this.idenity = new System.Windows.Forms.TextBox();
-            this.soc = new System.Windows.Forms.TextBox();
             this.depart = new System.Windows.Forms.TextBox();
             this.phone = new System.Windows.Forms.TextBox();
             this.age = new System.Windows.Forms.TextBox();
@@ -50,6 +49,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.soc = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -116,16 +116,6 @@
             this.idenity.Name = "idenity";
             this.idenity.Size = new System.Drawing.Size(99, 21);
             this.idenity.TabIndex = 80;
-            // 
-            // soc
-            // 
-            this.soc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.soc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.soc.ForeColor = System.Drawing.Color.White;
-            this.soc.Location = new System.Drawing.Point(74, 227);
-            this.soc.Name = "soc";
-            this.soc.Size = new System.Drawing.Size(99, 21);
-            this.soc.TabIndex = 79;
             // 
             // depart
             // 
@@ -259,18 +249,31 @@
             this.label11.TabIndex = 65;
             this.label11.Text = "姓名";
             // 
+            // soc
+            // 
+            this.soc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.soc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.soc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.soc.FormattingEnabled = true;
+            this.soc.Location = new System.Drawing.Point(75, 226);
+            this.soc.Name = "soc";
+            this.soc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.soc.Size = new System.Drawing.Size(98, 20);
+            this.soc.TabIndex = 85;
+            this.soc.SelectedIndexChanged += new System.EventHandler(this.soc_SelectedIndexChanged);
+            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(213, 388);
+            this.Controls.Add(this.soc);
             this.Controls.Add(this.reg);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pass);
             this.Controls.Add(this.idenity);
-            this.Controls.Add(this.soc);
             this.Controls.Add(this.depart);
             this.Controls.Add(this.phone);
             this.Controls.Add(this.age);
@@ -291,6 +294,7 @@
             this.MaximizeBox = false;
             this.Name = "register";
             this.Text = "注册";
+            this.Load += new System.EventHandler(this.register_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,7 +307,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox pass;
         private System.Windows.Forms.TextBox idenity;
-        private System.Windows.Forms.TextBox soc;
         private System.Windows.Forms.TextBox depart;
         private System.Windows.Forms.TextBox phone;
         private System.Windows.Forms.TextBox age;
@@ -318,5 +321,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox soc;
     }
 }

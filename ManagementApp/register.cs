@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Odbc;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,9 @@ namespace ManagementApp
     public partial class register : Form
     {
         IDataDao dd = new DataDaoImpl();
+        OdbcDataAdapter da;
+        DataSet ds;
+
         public register()
         {
             InitializeComponent();
@@ -40,6 +44,18 @@ namespace ManagementApp
 
         private void exit_Click(object sender, EventArgs e) {
             this.Hide();
+        }
+
+        private void soc_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
+
+        private void register_Load(object sender, EventArgs e) {
+            da = dd.listAllSoc();
+            ds = new DataSet();
+            da.Fill(ds);
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                soc.Items.Add(ds.Tables[0].Rows[i][0].ToString());
         }
     }
 }

@@ -21,5 +21,7 @@ namespace DBMan {
 
         OdbcDataAdapter listSoc(string xh);
         Boolean modUserU(User u,string xh);
+        
+        OdbcDataAdapter listAllSoc();
     }
 }
